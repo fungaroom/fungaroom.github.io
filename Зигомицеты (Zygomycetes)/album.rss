@@ -5,10 +5,10 @@
     <channel>
         <title>Зигомицеты (Zygomycetes)</title>
    	<link>..</link>
-        <generator>jAlbum 14</generator>
+        <generator>jAlbum 14.1</generator>
    		<description></description>
         <jalbum:absolutePath>http://fungarium.info/%D0%97%D0%B8%D0%B3%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D1%8B%20%28Zygomycetes%29/</jalbum:absolutePath>
-    	<jalbum:link rel="sub" href="http://fungarium.info/%D0%97%D0%B8%D0%B3%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D1%8B%20%28Zygomycetes%29/%D0%9C%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5%20%28Mucorales%29/album.rss" title="Мукоровые (Mucorales)" thumbnail="http://fungarium.info/%D0%97%D0%B8%D0%B3%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D1%8B%20%28Zygomycetes%29/%D0%9C%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5%20%28Mucorales%29/%D0%A4%D0%B8%D0%BA%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%28Phycomycetaceae%29/%D0%A1%D0%BF%D0%B8%D0%BD%D0%B5%D0%BB%D0%BB%D1%8E%D1%81%20%D1%84%D1%83%D0%B7%D0%B8%D0%B3%D0%B5%D1%80%20%28Spinellus%20fusiger%29/thumbs/fungi-0004198.jpg" thumbnailWidth="426" thumbnailHeight="320" />
+    	<jalbum:link rel="sub" href="http://fungarium.info/%D0%97%D0%B8%D0%B3%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D1%8B%20%28Zygomycetes%29/%D0%9C%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5%20%28Mucorales%29/album.rss" title="Мукоровые (Mucorales)" thumbnail="http://fungarium.info/%D0%97%D0%B8%D0%B3%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D1%8B%20%28Zygomycetes%29/%D0%9C%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5%20%28Mucorales%29/%D0%A4%D0%B8%D0%BA%D0%BE%D0%BC%D0%B8%D1%86%D0%B5%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%28Phycomycetaceae%29/%D0%A1%D0%BF%D0%B8%D0%BD%D0%B5%D0%BB%D0%BB%D1%8E%D1%81%20%D1%84%D1%83%D0%B7%D0%B8%D0%B3%D0%B5%D1%80%20%28Spinellus%20fusiger%29/thumbs/fungi-0004198.jpg" thumbnailWidth="640" thumbnailHeight="480" />
         
     </channel>
 </rss>
