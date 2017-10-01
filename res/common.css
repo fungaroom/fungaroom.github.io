@@ -136,6 +136,7 @@
       color: #ffffff; }
       .lightbox .thumb-strip button.left, .lightbox .thumb-strip button.right {
         width: 3rem;
+        font-size: 1.5rem;
         text-align: center;
         top: 0;
         height: 100%; }
@@ -223,6 +224,8 @@
       user-select: none; }
     .lightbox .lightbox-main.image img {
       width: 100%; }
+    .lightbox .lightbox-main.audio img.poster {
+      width: 100%; }
     .lightbox .lightbox-main.audio audio {
       position: absolute;
       bottom: 10px;
@@ -237,7 +240,8 @@
     .lightbox .lightbox-main.video video {
       width: 100%; }
     .lightbox .lightbox-main.other {
-      min-width: 240px; }
+      min-width: 240px;
+      text-align: center; }
       .lightbox .lightbox-main.other .click-hint {
         text-align: center;
         padding: 0.5em;
@@ -250,6 +254,10 @@
       overflow: auto; }
       .lightbox .lightbox-main.external.iframe {
         overflow: hidden; }
+    .lightbox .lightbox-main.vr {
+      overflow: hidden; }
+      .lightbox .lightbox-main.vr iframe {
+        display: block; }
     .lightbox .lightbox-main .regions {
       position: absolute;
       left: 0;
@@ -310,10 +318,10 @@
         margin-bottom: 0;
         margin-right: 1px;
         cursor: default; }
-        .lightbox .lightbox-caption .buttons .button:first-child {
+        .lightbox .lightbox-caption .buttons .button:first-of-type {
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px; }
-        .lightbox .lightbox-caption .buttons .button:last-child {
+        .lightbox .lightbox-caption .buttons .button:last-of-type {
           margin-right: 0;
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px; }
@@ -769,8 +777,11 @@
 /* user.scss :: User defined styles */
 /* defaults.scss :: default values, functions and mixins */
 /******************************************* Styling default tags */
+html, body {
+  min-height: 100%; }
+
 html {
-  background-color: #1b1b1b; }
+  background-color: #000000; }
 
 body {
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
@@ -904,7 +915,7 @@ input[type=text] {
     border-color: #0099cc; }
 
 .row {
-  max-width: none; }
+  max-width: 87.5em; }
   .row .row.thumbnails {
     margin-left: -0.15625rem;
     margin-right: -0.15625rem; }
@@ -962,7 +973,7 @@ h3 .date, h4 .date {
 /******************************************* Top bar */
 .page-top,
 .page-bottom {
-  background-color: rgba(34,34,34,0.800); }
+  background-color: transparent; }
 
 .page-bottom {
   margin-top: 0.9375rem; }
@@ -970,8 +981,8 @@ h3 .date, h4 .date {
 .top-bar {
   padding: 0;
   line-height: 2em;
-  background-color: transparent;
-  box-shadow: none;
+  background-color: rgba(34,34,34,0.800);
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.50);
   /*
   .home-link {
   	display: block;
@@ -1081,7 +1092,7 @@ h3 .date, h4 .date {
   background-position: center center;
   background-size: cover;
   background-color: transparent;
-  box-shadow: 1px 2px 6px rgba(0,0,0,0.50); }
+  box-shadow: none; }
   .hero .hero-image {
     position: relative;
     min-height: 480px;
@@ -1093,7 +1104,7 @@ h3 .date, h4 .date {
     background-size: cover;
     border-radius: 0 0 0px 0px;
     background-color: transparent;
-    box-shadow: none; }
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.50); }
     .hero .hero-image header {
       display: inline-block;
       position: absolute;
@@ -1104,7 +1115,7 @@ h3 .date, h4 .date {
       max-height: 100%;
       padding: 0.625rem 1.25rem;
       overflow-y: auto;
-      border-bottom-left-radius: 0;
+      border-bottom-left-radius: 0px;
       background: rgba(17, 17, 17, 0.8);
       background: -webkit-linear-gradient(legacy-direction(90deg), rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.5) 60%, rgba(17, 17, 17, 0) 100%);
       background: linear-gradient(90deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.5) 60%, rgba(17, 17, 17, 0) 100%); }
@@ -1354,6 +1365,9 @@ h3 .date, h4 .date {
         .thumbnails .column .card .thumb img.show-image {
           visibility: visible;
           opacity: 1; }
+      .thumbnails .column .card .thumb img[src$="svg"] {
+        width: 60%;
+        max-width: 160px; }
     .thumbnails .column .card:hover {
       background-color: rgba(68,68,68,0.600); }
       .thumbnails .column .card:hover h1, .thumbnails .column .card:hover h2, .thumbnails .column .card:hover h3, .thumbnails .column .card:hover h4, .thumbnails .column .card:hover h5, .thumbnails .column .card:hover h6 {
@@ -1553,9 +1567,9 @@ h3 .date, h4 .date {
     #shop .select-box .button {
       border-radius: 0;
       margin: 0.625rem 0 0.625rem 1px; }
-      #shop .select-box .button:first-child {
+      #shop .select-box .button:first-of-type {
         border-radius: 0px 0 0 0px; }
-      #shop .select-box .button:last-child {
+      #shop .select-box .button:last-of-type {
         border-radius: 0 0px 0px 0; }
 
 /******************************************* Tag cloud box */
@@ -1669,9 +1683,9 @@ h3 .date, h4 .date {
 .footer {
   color: #ffffff; }
   .footer a {
-    color: #ccccff; }
+    color: #3333ff; }
     .footer a:hover {
-      color: #ff99ff; }
+      color: #990099; }
   .footer footer {
     padding: 0.625rem 0;
     text-align: center;
@@ -2064,7 +2078,7 @@ h3 .date, h4 .date {
 
   .reveal.small,
   .reveal.tiny {
-    max-width: none; }
+    max-width: 87.5em; }
 
   .card.horizontal-medium {
     text-align: left; }
