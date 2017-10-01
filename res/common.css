@@ -2035,7 +2035,7 @@ h3 .date, h4 .date {
 /********* medium displays >= 640px */
 @media screen and (min-width: 40em) {
   .top-bar .top-bar-left {
-    max-width: none; }
+    max-width: 68%; }
   .top-bar .search .search-input {
     width: 0;
     overflow: hidden;
@@ -2118,7 +2118,7 @@ h3 .date, h4 .date {
 /********* large displays >= 1024px */
 @media only screen and (min-width: 64em) {
   .top-bar .top-bar-left {
-    max-width: none; }
+    max-width: 82%; }
   .top-bar .menu .home-link {
     display: inline-block;
     text-align: left;
