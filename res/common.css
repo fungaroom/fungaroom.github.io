@@ -85,12 +85,14 @@
     width: 40px;
     z-index: 1; }
     .lightbox .lightbox-loading div {
-      -moz-animation: lightbox-loading 0.5s ease infinite;
-      -webkit-animation: lightbox-loading 0.5s ease infinite;
-      animation: lightbox-loading 0.5s ease infinite;
+      -moz-animation: lightbox-loading 1s ease infinite;
+      -webkit-animation: lightbox-loading 1s ease infinite;
+      animation: lightbox-loading 1s ease infinite;
       background-color: #fff;
       height: 20px;
       width: 20px; }
+  .lightbox .lightbox-main .lightbox-loading div {
+    background-color: #0099cc; }
   .lightbox .thumb-strip {
     position: absolute;
     max-width: 100%;
@@ -258,6 +260,16 @@
       overflow: hidden; }
       .lightbox .lightbox-main.vr iframe {
         display: block; }
+      .lightbox .lightbox-main.vr .error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 60%;
+        transform: translate(-50%, -50%);
+        padding: 1rem;
+        color: #eee;
+        background-color: #000;
+        border-radius: .5rem; }
     .lightbox .lightbox-main .regions {
       position: absolute;
       left: 0;
@@ -443,7 +455,7 @@
     margin: 0 .25rem 0 0;
     padding: .2rem;
     border-radius: 2rem;
-    background-color: rgba(0, 0, 0, 0.2); }
+    background-color: #ccc; }
     .modal.shopping-cart .window .button.icon-cancel:hover {
       background-color: #c00; }
     .modal.shopping-cart .window .button.icon-cancel:before {
@@ -531,7 +543,7 @@
     	line-height: 1.2;
     	padding: .2rem .25rem .25rem;
     	margin: 0 0 0 0.2rem;
-    	background-color: _(modalHightlightBgColor);
+    	background-color: _(modalHighlightBgColor);
     }
     */ }
     .modal.shopping-cart .window .pricing > div {
@@ -578,8 +590,8 @@
 .shopping-cart-shortcut {
   position: fixed;
   right: 0;
-  bottom: 0;
-  z-index: 9; }
+  bottom: 2.1rem;
+  z-index: 10; }
   .shopping-cart-shortcut .button {
     margin-bottom: 0; }
 
@@ -612,7 +624,7 @@
   .shopping-cart-shortcut {
     position: fixed;
     right: 1rem;
-    bottom: 1rem; } }
+    bottom: 4rem; } }
 /* large displays >= 1024px */
 @media only screen and (min-width: 64.063em) {
   .modal.shopping-cart .window {
@@ -632,6 +644,7 @@
         float: right; } }
 
 /*# sourceMappingURL=laza.paypal.css.map */
+
 
 /* laza.modal.scss */
 /* defaults.scss :: default values, functions and mixins */
@@ -1341,15 +1354,17 @@ h3 .date, h4 .date {
     margin-bottom: 0.3125rem;
     background-color: rgba(68,68,68,0.400);
     border-radius: 0px;
-    transition: background-color 500ms linear;
+    transition: opacity 1s ease-out, background-color 500ms linear;
     background-image: none;
     background-position: center center;
     box-shadow: 1px 2px 6px rgba(0,0,0,0.50); }
     .thumbnails .column .card.active {
       background-color: rgba(68,68,68,0.600); }
-    .thumbnails .column .card.lazyload .thumb, .thumbnails .column .card.preload .thumb {
+    .thumbnails .column .card.lazyload, .thumbnails .column .card.preload {
       visibility: hidden;
-      height: 480px; }
+      opacity: 0; }
+      .thumbnails .column .card.lazyload .thumb, .thumbnails .column .card.preload .thumb {
+        height: 480px; }
     .thumbnails .column .card h1, .thumbnails .column .card h2, .thumbnails .column .card h3, .thumbnails .column .card h4, .thumbnails .column .card h5, .thumbnails .column .card h6 {
       transition: color 500ms linear; }
     .thumbnails .column .card .thumb {
@@ -1558,18 +1573,18 @@ h3 .date, h4 .date {
 }
 */
 /******************************************* Shop box */
-#shop {
+#shop, #feedback {
   text-align: center; }
-  #shop .select-box {
+  #shop .select-box, #feedback .select-box {
     white-space: nowrap; }
-    #shop .select-box label {
+    #shop .select-box label, #feedback .select-box label {
       display: none; }
-    #shop .select-box .button {
+    #shop .select-box .button, #feedback .select-box .button {
       border-radius: 0;
       margin: 0.625rem 0 0.625rem 1px; }
-      #shop .select-box .button:first-of-type {
+      #shop .select-box .button:first-of-type, #feedback .select-box .button:first-of-type {
         border-radius: 0px 0 0 0px; }
-      #shop .select-box .button:last-of-type {
+      #shop .select-box .button:last-of-type, #feedback .select-box .button:last-of-type {
         border-radius: 0 0px 0px 0; }
 
 /******************************************* Tag cloud box */
@@ -2105,14 +2120,14 @@ h3 .date, h4 .date {
   .share-card .social-links {
     display: block; }
 
-  #tag-cloud, #search-new, #shop {
+  #tag-cloud, #search-new, #shop, #feedback {
     text-align: left; }
 
-  #shop .select-box {
+  #shop .select-box, #feedback .select-box {
     text-align: right; }
-    #shop .select-box label {
+    #shop .select-box label, #feedback .select-box label {
       display: inline; }
-    #shop .select-box .button {
+    #shop .select-box .button, #feedback .select-box .button {
       margin-top: 0;
       margin-bottom: 0; } }
 /********* large displays >= 1024px */
